@@ -12,19 +12,18 @@
 
     <!-- Styles -->
     @vite('resources/js/app.js')
+    @vite('resources/scss/app.scss')
 
+    <title>Laravel Comics</title>
 </head>
-
 <body>
+    @include('partials.header')
+    @include('partials.jumbotron')
 
-    <header>
-        
-    </header>
+    @yield('content')
 
-    <main>
-        @yield('content')
-    </main>
-
+    @include('partials.cta-section')
+    @include('partials.footer')
+    @include('partials.social-footer')
 </body>
-
 </html>
