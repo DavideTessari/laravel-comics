@@ -70,32 +70,32 @@ return [
 
     "dcComics" => [
         [
-            "label"=>"characters",
-            "url"=>"#",
+            'label' => 'characters',
+            'url' => '#',
         ],
         [
-            "label"=>"comics",
-            "url"=>"#",
+            'label' => 'comics',
+            'url' => '#',
         ],
         [
-            "label"=>"movies",
-            "url"=>"#",
+            'label' => 'movies',
+            'url' => '#',
         ],
         [
-            "label"=>"tv",
-            "url"=>"#",
+            'label' => 'tv',
+            'url' => '#',
         ],
         [
-            "label"=>"games",
-            "url"=>"#",
+            'label' => 'games',
+            'url' => '#',
         ],
         [
-            "label"=>"videos",
-            "url"=>"#",
+            'label' => 'videos',
+            'url' => '#',
         ],
         [
-            "label"=>"news",
-            "url"=>"#",
+            'label' => 'news',
+            'url' => '#',
         ],
     ],
 

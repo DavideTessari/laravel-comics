@@ -61,3 +61,9 @@ Route::get('/description/{slug}', function ($slug) {
 
     return view('description', compact('movie'));
 })->name('description');
+
+Route::get('/products', function () {
+    $comics = config('comics');
+
+    return view('products', ['comics' => $comics]);
+})->name('products');
