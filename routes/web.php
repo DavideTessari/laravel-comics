@@ -14,12 +14,50 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $comicsAray = config('comics');
-    dd($comicsArray);
+    return view('home');
+})->name('home');
 
-    $data = [
-        'comics' => $comicsAray
-    ];
+Route::get('/movies', function () {
+    return view('movies');
+})->name('movies');
 
-    return view('home', $data);
-});
+Route::get('/comics', function () {
+    return view('comics');
+})->name('comics');
+
+Route::get('/tv', function () {
+    return view('tv');
+})->name('tv');
+
+Route::get('/games', function () {
+    return view('games');
+})->name('games');
+
+Route::get('/collectibles', function () {
+    return view('collectibles');
+})->name('collectibles');
+
+Route::get('/videos', function () {
+    return view('videos');
+})->name('videos');
+
+Route::get('/fans', function () {
+    return view('fans');
+})->name('fans');
+
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+
+Route::get('/shop', function () {
+    return view('shop');
+})->name('shop');
+
+Route::get('/description/{slug}', function ($slug) {
+    $movies = config('dc-comics');
+    $movieAr = array_filter($movies, fn($item) => $item['slug'] === $slug);
+    $movie = $movieAr[array_key_first($movieAr)];
+
+
+    return view('description', compact('movie'));
+})->name('description');
